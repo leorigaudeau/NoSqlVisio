@@ -16,3 +16,5 @@ db.sport.updateMany({requiredTeam:true},{$inc:{miniPayer:10}},{upsert: true})
 
 
 db.sport.updateMany({},{$push:{team:{"name":"pierre",playerNumber:"5"}}},{upsert: true});
+
+db.sport.updateMany({},{$push:{team:{$each:[{isCapitain:true}]}}},{upsert: true});
